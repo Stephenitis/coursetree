@@ -1,0 +1,7 @@
+<h2>Pick a course add a requisite to</h2>
+
+<select>
+  <% @courses.each do |course| %>
+  <option name="course" value="<%=course.id%>"> <%= "#{course.prefix.upcase} - #{course.level}" %></option>
+  <% end %>
+</select>

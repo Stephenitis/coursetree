@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <link rel="stylesheet" href="/css/normalize.css">
+  
+  <link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/application.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <title></title>
+</head>
+<body>
+<nav>
+  <span id="brand"><a href="/">CourseTree</a></span>
+  <ul>
+  <li> <a href="/course/create">map a course</a></li>
+  <li> <a href="/course/index">course index</a></li>
+  <li> <a href="/course/requisite/create">add a requisite</a></li>
+</ul>
+</nav>
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
+</html>

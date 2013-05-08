@@ -1,0 +1,24 @@
+<form method="post" action="/course/requisite/create">
+<%= partial(:_course_picker, :courses => @courses )%>
+
+  <h2>Requisites</h2>
+  <label for="course[mandatory]">requisite type</label>                
+  prerequisite <input type="radio"    name="requisite[type]" required="required" value="prerequisite">
+  corequisite <input type="radio"    name="requisite[type]" required="required" value="corequisite">
+
+  <label for="course[title]">title</label>
+  <input type="text"       name="requisite[title]"    required="required">
+
+  <label for="course[prefix]">level</label>                
+  <input type="text"      name="requisite[level]"   required="required">
+
+  <label for="course[category]">prefix</label>                
+  <input type="text"        name="requisite[prefix]"   required="required">
+
+  <label for="course[mandatory]">category</label>                
+  <input type="text"        name="requisite[category]" required="required">
+
+  <label for="course[mandatory]">mandatory?</label>                
+  <input type="checkbox"    name="requisite[mandatory]" required="required"><br>
+      <input type="submit" value="map this requisite">
+  </form>
