@@ -45,7 +45,7 @@ function init(){
                 data: {},
                 children: []
             }]
-            }]
+        }]
         },
         {
             id: "node02",
@@ -55,8 +55,20 @@ function init(){
                 id: "node3",
                 name: "BIO 200",
                 data: {},
+                children: [{
+                id: "node4",
+                name: "BIO 300",
+                data: {},
                 children: []
-            }] }]
+            },
+            {
+                id: "node5",
+                name: "BIO 312",
+                data: {},
+                children: []
+            }]
+            }]
+        }]
         };
     //end
     //init Spacetree
@@ -79,8 +91,8 @@ function init(){
         //set overridable=true for styling individual
         //nodes or edges
         Node: {
-            height: 100,
-            width: 100,
+            height: 80,
+            width: 80,
             type: 'rectangle',
             color: '#aaa',
             overridable: true
@@ -115,7 +127,7 @@ function init(){
             //set label styles
             var style = label.style;
             style.width = 100 + 'px';
-            style.height = 100 + 'px';            
+            style.height = 600 + 'px';            
             style.cursor = 'pointer';
             style.color = '#333';
             style.fontSize = '1.4em';
