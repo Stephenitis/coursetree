@@ -27,49 +27,7 @@ var Log = {
 
 
 function init(){
-    var json = {
-        id: "node00",
-        name: "Biology Major",
-        data: {},
-        children: [{
-            id: "node01",
-            name: "BIO 101",
-            data: {},
-            children: [{
-                id: "node3",
-                name: "BIO 200",
-                data: {},
-                children: [{
-                id: "node4",
-                name: "BIO 300",
-                data: {},
-                children: []
-            }]
-        }]
-        },
-        {
-            id: "node02",
-            name: "BIO 102",
-            data: {},
-            children: [{
-                id: "node3",
-                name: "BIO 200",
-                data: {},
-                children: [{
-                id: "node4",
-                name: "BIO 300",
-                data: {},
-                children: []
-            },
-            {
-                id: "node5",
-                name: "BIO 312",
-                data: {},
-                children: []
-            }]
-            }]
-        }]
-        };
+    var json = courseTree;
     //end
     //init Spacetree
     //Create a new ST instance
@@ -77,7 +35,7 @@ function init(){
         //id of viz container element
         injectInto: 'infovis',
         //set duration for the animation
-        duration: 800,
+        duration: 600,
         //set animation transition type
         transition: $jit.Trans.Quart.easeInOut,
         //set distance between node and its children
@@ -99,7 +57,7 @@ function init(){
         },
         
         Edge: {
-            type: 'bezier',
+            type: 'arrow',
             overridable: true
         },
         
@@ -127,7 +85,7 @@ function init(){
             //set label styles
             var style = label.style;
             style.width = 100 + 'px';
-            style.height = 600 + 'px';            
+            style.height = 100 + 'px';            
             style.cursor = 'pointer';
             style.color = '#333';
             style.fontSize = '1.4em';
@@ -169,7 +127,7 @@ function init(){
         onBeforePlotLine: function(adj){
             if (adj.nodeFrom.selected && adj.nodeTo.selected) {
                 adj.data.$color = "#eed";
-                adj.data.$lineWidth = 7;
+                adj.data.$lineWidth = 5;
             }
             else {
                 delete adj.data.$color;
