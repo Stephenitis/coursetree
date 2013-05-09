@@ -1,3 +1,4 @@
 class Relationship < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :course
+  belongs_to :requisite, :class_name => "Course"
 end
