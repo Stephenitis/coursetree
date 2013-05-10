@@ -36,29 +36,38 @@ function init(){
         injectInto: 'infovis',
         //set duration for the animation
         duration: 600,
+        levelsToShow: 5,
         //set animation transition type
         transition: $jit.Trans.Quart.easeInOut,
         //set distance between node and its children
-        levelDistance: 50,
+        levelDistance: 80,
+        offsetX: 0,
+        offsetY: 350,
+        orientation: "top", 
+        subtreeOffset: -99, 
         //enable panning
         Navigation: {
-          enable:true,
-          panning:true
+          enable: true,
+          panning: true
       },
         //set node and edge styles
         //set overridable=true for styling individual
         //nodes or edges
         Node: {
-            height: 80,
-            width: 80,
+            height: 30,
+            width: 30,
             type: 'rectangle',
             color: '#aaa',
-            overridable: true
+            // autoWidth:true,
+            autoHeight: true,
+            overridable: true,
+            align: "center",
+            orientation: 'left'
         },
         
         Edge: {
             type: 'arrow',
-            overridable: true
+            overridable: false
         },
         
         onBeforeCompute: function(node){
@@ -77,18 +86,19 @@ function init(){
             label.innerHTML = node.name;
             label.onclick = function(){
             	if(normal.checked) {
-                   st.onClick(node.id);
-               } else {
+                 st.onClick(node.id);
+             } else {
                 st.setRoot(node.id, 'animate');
             }
         };
             //set label styles
             var style = label.style;
-            style.width = 100 + 'px';
-            style.height = 100 + 'px';            
+            style.width = 55 + 'px';
+            style.height = 55 + 'px';            
             style.cursor = 'pointer';
             style.color = '#333';
-            style.fontSize = '1.4em';
+            style.fontWeight = "bold";
+            style.fontSize = '.7em';
             style.textAlign= 'left';
             style.paddingTop = '3px';
             style.paddingLeft = '3px';
@@ -140,8 +150,6 @@ function init(){
     //compute node positions and layout
     st.compute();
     //optional: make a translation of the tree
-    st.geom.translate(new $jit.Complex(-200, 0), "current");
-    //emulate a click on the root node.
     st.onClick(st.root);
     //end
     //Add event handlers to switch spacetree orientation.

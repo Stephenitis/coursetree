@@ -6,6 +6,5 @@ end
 
 get "/tree/:course_id" do
   @tree = Course.find(params[:course_id]).to_node
-  @tree
     erb :tree_view
 end
