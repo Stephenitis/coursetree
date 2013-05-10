@@ -70,7 +70,7 @@ nav a {
   margin: 120px auto;
   width: 99%;
   height 1000px;
-  background-color:red;
+  /*background-color:red;*/
   padding: 10px 20px 20px 20px;
   box-shadow: inset 0 2px #fff, 0 2px 3px rgba(34,25,25,0.4);
   -moz-box-shadow: inset 0 2px #fff, 0 2px 3px rgba(34,25,25,0.4);
