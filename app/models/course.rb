@@ -8,8 +8,8 @@ has_many :inverse_requisites, :through => :inverse_relationships, :source => :co
 
 def to_node
     { "id" => self.id,
-      "name" => self.subject,
-      "data" => {},
+      "name" => self.SUBJ + self.CRS + ":" + self.TITLE,
+      "data" => self,
       "children"   => self.inverse_requisites.map { |c| c.to_node }
     }
   end

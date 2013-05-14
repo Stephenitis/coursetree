@@ -1,0 +1,15 @@
+courses are AAA 123([LS]?) (UG D|GR B) something
+some have AAA-123
+some are AAA123
+som are four letter course (EDAD CURR COUN EDPS)
+some are 2 letters (LL)
+
+
+/[A-Z]{3}[ -]\d{3}/
+
+csv = CSV.open('campus1.csv', headers:true).to_a
+prereqs = csv.select{|h| h["PREREQS"]}
+prereqs.map{|h| [h["PREREQS"], h["PREREQS"].gsub("-", " ").scan(/[A-Z]{2,4} ?\d{3}[LS]?/)]}.reject{|before, after| after.empty?}.map(&:last).flatten.count
+
+
+/[A-Z]{2,4} ?\d{3}[LS]?/

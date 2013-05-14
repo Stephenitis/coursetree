@@ -42,7 +42,7 @@ function init(){
         //set distance between node and its children
         levelDistance: 80,
         offsetX: 0,
-        offsetY: 350,
+        offsetY: 280,
         orientation: "top", 
         subtreeOffset: -200, 
         //enable panning
@@ -55,7 +55,7 @@ function init(){
         //nodes or edges
         Node: {
             height: 30,
-            width: 30,
+            width: 50,
             type: 'rectangle',
             color: '#aaa',
             // autoWidth:true,

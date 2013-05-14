@@ -22,6 +22,7 @@ require 'erb'
 require 'bcrypt'
 require 'debugger'
 require 'faker'
+require 'pry'
 
 require 'sinatra'
 require 'sinatra/reloader'

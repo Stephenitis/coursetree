@@ -11,61 +11,58 @@
   <!--[if IE]><script language="javascript" type="text/javascript" src="../../Extras/excanvas.js"></script><![endif]-->
   <script> var courseTree = <%= @tree.to_json %> </script>
   <!-- JIT Library File -->
-  <script language="javascript" type="text/javascript" src="../../jit.js"></script>
 
-  <!-- Example File -->
-  <script language="javascript" type="text/javascript" src="example1.js"></script>
 </head>
 
 <body onload="init();">
-  <div id="container">
-    <div id="log"></div>
+  <!-- <div id="container"> -->
+  <div id="log"></div>
 
-    <div id="center-container">
+  <div id="center-container">
 
-      <div id="infovis"></div>    
-    </div>
+    <div id="infovis"></div>    
+  </div>
 
-    <div id="right-container">
+  <div id="right-container">
 
-      <h4>Course Tree Orientation</h4>
-      <table>
-        <tr>
-          <td>
-            <label for="r-left">Left </label>
-          </td>
-          <td>
-            <input type="radio" id="r-left" name="orientation" value="left" />
-          </td>
-        </tr>
-        <tr>
-         <td>
-          <label for="r-top">Top </label>
+    <h4>Course Tree Orientation</h4>
+    <table>
+      <tr>
+        <td>
+          <label for="r-left">Left </label>
         </td>
         <td>
-          <input type="radio" id="r-top" name="orientation" checked="checked" value="top" />
+          <input type="radio" id="r-left" name="orientation" value="left" />
         </td>
       </tr>
       <tr>
        <td>
-        <label for="r-bottom">Bottom </label>
+        <label for="r-top">Top </label>
       </td>
       <td>
-        <input type="radio" id="r-bottom" name="orientation" value="bottom" />
+        <input type="radio" id="r-top" name="orientation" checked="checked" value="top" />
       </td>
     </tr>
     <tr>
-      <td>
-        <label for="r-right">Right </label>
-      </td> 
-      <td> 
-       <input type="radio" id="r-right" name="orientation" value="right" />
-     </td>
-   </tr>
- </table>
+     <td>
+      <label for="r-bottom">Bottom </label>
+    </td>
+    <td>
+      <input type="radio" id="r-bottom" name="orientation" value="bottom" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="r-right">Right </label>
+    </td> 
+    <td> 
+     <input type="radio" id="r-right" name="orientation" value="right" />
+   </td>
+ </tr>
+</table>
 
- <h4>Selection Mode</h4>
- <table>
+<h4>Selection Mode</h4>
+<table>
   <tr>
     <td>
       <label for="s-normal">Normal </label>
@@ -83,8 +80,8 @@
   </td>
 </tr>
 </table>
- </div>
 </div>
+<!-- </div> -->
 
 </body>
 </html>
